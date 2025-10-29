@@ -33,4 +33,10 @@ export default ({ env }) => ({
       maxAge: 1000 * 60 * 60 * 24 * 7, // 7 days
     },
   },
+  // Auto-admin creation settings
+  defaultEmail: env('ADMIN_EMAIL'),
+  defaultPassword: env('ADMIN_PASSWORD'),
+  defaultUsername: env('ADMIN_USERNAME'),
+  defaultFirstname: env('ADMIN_FIRSTNAME'),
+  defaultLastname: env('ADMIN_LASTNAME'),
 });
