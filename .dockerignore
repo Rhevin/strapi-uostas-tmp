@@ -1,9 +1,8 @@
 # Dependencies
 node_modules/
-package-lock.json
 
-# Build output
-dist/
+# Build output - commented out so dist/ is included
+# dist/
 build/
 .cache/
 
