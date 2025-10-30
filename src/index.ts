@@ -89,13 +89,13 @@ export default {
         where: {
           role: authenticatedRole.id,
           action: {
-            $in: ['api::post.post.find', 'api::post.post.findOne'],
+            $in: ['api::post.post.find', 'api::post.post.findOne', 'api::post.post.create', 'api::post.post.update', 'api::post.post.delete'],
           },
         },
       });
 
-      // Enable authenticated access to posts if not already enabled
-      const actions = ['api::post.post.find', 'api::post.post.findOne'];
+      // Enable authenticated access to posts (including create, update, delete)
+      const actions = ['api::post.post.find', 'api::post.post.findOne', 'api::post.post.create', 'api::post.post.update', 'api::post.post.delete'];
       for (const action of actions) {
         const existingPermission = authPermissions.find(p => p.action === action);
         if (!existingPermission) {
